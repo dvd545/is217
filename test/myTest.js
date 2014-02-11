@@ -1,11 +1,11 @@
-function isEven(val) {
-    return val % 2 === 0;
+function isOdd(val) {
+    return val % 2 === 1;
 }
  
-test('isEven()', function() {
-    ok(isEven(0), 'Zero is an even number');
-    ok(isEven(2), 'So is two');
-    ok(isEven(-4), 'So is negative four');
-    ok(!isEven(1), 'One is not an even number');
-    ok(!isEven(-7), 'Neither is negative seven');
+test('isOdd()', function() {
+    ok(isOdd(1), 'One is an odd number');
+    ok(isOdd(3), 'So is three');
+    ok(isOdd(15), 'So is fifteen');
+    ok(!isOdd(8), 'Eight is not an odd number');
+    ok(!isOdd(-4), 'Neither is negative four');
 })
