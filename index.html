@@ -15,37 +15,9 @@
 		<title>Refactored date examples</title>
 		  <link rel="stylesheet" href="test/qunit.css">
 		  <script src="test/qunit.js"></script>
-		  <script src="test/prettydate2.js"></script>
-		  <script>
-		  test("prettydate.format", function() {
-			function date(then, expected) {
-			  equal(prettyDate.format("2008/01/28 22:25:00", then),
-				expected);
-			}
-			date("2008/01/28 22:24:30", "just now");
-			date("2008/01/28 22:23:30", "1 minute ago");
-			date("2008/01/28 21:23:30", "1 hour ago");
-			date("2008/01/27 22:23:30", "Yesterday");
-			date("2008/01/26 22:23:30", "2 days ago");
-			date("2007/01/26 22:23:30", undefined);
-		  });
-		 
-		  function domtest(name, now, first, second) {
-			test(name, function() {
-			  var links = document.getElementById("qunit-fixture")
-				.getElementsByTagName("a");
-			  equal(links[0].innerHTML, "January 28th, 2008");
-			  equal(links[2].innerHTML, "January 27th, 2008");
-			  prettyDate.update(now);
-			  equal(links[0].innerHTML, first);
-			  equal(links[2].innerHTML, second);
-			});
-		  }
-		  domtest("prettyDate.update", "2008-01-28T22:25:00Z",
-			"2 hours ago", "Yesterday");
-		  domtest("prettyDate.update, one day later", "2008/01/29 22:25:00",
-    "Yesterday", "2 days ago");
-  </script>
+		  <script src="test/myTest.js"></script>
+		  
+  
 </head>
 
     <body>
@@ -55,33 +27,11 @@
 
         <!-- Add your site or application content here -->
         
-		<div id="qunit"></div>
-		<div id="qunit-fixture">
-		 
-		<ul>
-		  <li class="entry">
-			<p>blah blah blah...</p>
-			<small class="extra">
-			  Posted <span class="time">
-				<a href="/2008/01/blah/57/" title="2008-01-28T20:24:17Z"
-				  >January 28th, 2008</a>
-			  </span>
-			  by <span class="author"><a href="/john/">John Resig</a></span>
-			</small>
-		  </li>
-		  <li class="entry">
-			<p>blah blah blah...</p>
-			<small class="extra">
-			  Posted <span class="time">
-				<a href="/2008/01/blah/57/" title="2008-01-27T22:24:17Z"
-				  >January 27th, 2008</a>
-			  </span>
-			  by <span class="author"><a href="/john/">John Resig</a></span>
-			</small>
-		  </li>
-		</ul>
-		 
-		</div>
+		<h1 id="qunit-header">QUnit Test Suite</h1>
+		<h2 id="qunit-banner"></h2>
+		<div id="qunit-testrunner-toolbar"></div>
+		<h2 id="qunit-userAgent"></h2>
+		<ol id="qunit-tests"></ol>
 			
          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
